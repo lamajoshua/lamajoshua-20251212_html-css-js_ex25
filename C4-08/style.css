@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+/* 一コマずつ動き続ける */
+.steps {
+  background: url(images/wcb-chan-animation.svg) no-repeat;
+  width: 200px;
+  height: 200px;
+  animation: smile .5s steps(4) alternate infinite;
+}
+.steps:hover {
+  animation-play-state: paused;
+}
+@keyframes smile {
+  to {
+    background-position: -800px 0;
+  }
+}
+
+/* クリックしたら画像が動く */
+.btn-question {
+  color: #0bd;
+  border: 2px solid;
+  border-radius: 8px;
+  padding-right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  place-items: center;
+}
+.btn-question:hover {
+  color: #0d9;
+}
+.btn-question span {
+  background: url(images/question.svg) no-repeat;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
+.animate span {
+  animation: question .6s steps(24) forwards;
+}
+@keyframes question {
+  to {
+    background-position: -1200px 0;
+  }
+}
+
+/* 基本スタイル */
+body {
+  padding: 1rem;
+}
+img {
+  display: block;
+}
+h2 {
+  margin-top: 3rem;
+}
